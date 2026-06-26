@@ -206,3 +206,30 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => observer.observe(section));
 
+/* --- Parallax + fade/scale imaxes grid -------------------- */
+const parallaxItems = document.querySelectorAll('.work-item-image');
+const pState = Array.from(parallaxItems).map(() => ({ curY: 0, tgtY: 0 }));
+
+function runParallax() {
+  const vh = window.innerHeight;
+  parallaxItems.forEach((item, i) => {
+    const img = item.querySelector('img');
+    if (!img) return;
+    const rect = item.getBoundingClientRect();
+
+    // Progress: 0 cuando card bajo viewport, 1 cuando base de card visible
+    const p = Math.max(0, Math.min(1, (vh - rect.top) / rect.height));
+
+    // Parallax Y con lerp
+    pState[i].tgtY = ((rect.top + rect.height / 2 - vh / 2) / vh) * 18;
+    pState[i].curY += (pState[i].tgtY - pState[i].curY) * 0.07;
+
+    // Opacidad y escala directas al scroll (sin lerp)
+    img.style.opacity   = (0.2 + p * 0.8).toFixed(3);
+    img.style.transform = `translateY(${pState[i].curY.toFixed(2)}px) scale(${(0.75 + p * 0.25).toFixed(3)})`;
+  });
+  requestAnimationFrame(runParallax);
+}
+
+runParallax();
+

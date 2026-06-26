@@ -101,3 +101,25 @@ document.querySelectorAll('.mobile-nav a').forEach(link => {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeMenu();
 });
+
+/* --- Entrada de bloques con scroll ------------------------- */
+const revealEls = Array.from(
+  document.querySelectorAll('.work-images-grid')
+).filter(el => el.children.length > 1);
+
+function calcEntryProgress(rect, vh) {
+  return Math.max(0, Math.min(1, (vh - rect.top) / (vh * 0.38)));
+}
+
+function runReveal() {
+  const vh = window.innerHeight;
+  revealEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const p = Math.max(0, Math.min(1, (vh - rect.top) / rect.height));
+    el.style.opacity   = (0.2 + p * 0.8).toFixed(3);
+    el.style.transform = `scale(${(0.75 + p * 0.25).toFixed(3)})`;
+  });
+  requestAnimationFrame(runReveal);
+}
+
+runReveal();
