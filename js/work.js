@@ -10,15 +10,15 @@ const translations = {
     'footer.alias':           'Tamén coñecido como Ajaspino',
     'work.nav.prev':          'Anterior',
     'work.nav.next':          'Seguinte',
-    'work.bruar.date':        '2016–Actualidade',
-    'work.bruar.category':    'Cultura',
+    'work.bruar.date':        '2021',
     'work.bruar.discipline':  'Deseño Gráfico',
-    'work.bruar.description': 'Identidade visual para BRUAR, asociación cultural dedicada á promoción do jazz e da música moderna en Ribadeo. Un sistema gráfico flexible desenvolvido para acompañar a comunicación dos seus cursos, concertos e actividades desde 2016.',
-    'work.bruar.body1':       'Desde hai máis dunha década, BRUAR promove actividades vinculadas á formación musical, o jazz e a música moderna en Ribadeo. A asociación organiza cursos, concertos e encontros que reúnen alumnado, profesorado e afeccionados arredor da práctica e divulgación musical.',
-    'work.bruar.body2':       'A colaboración comezou en 2016 coa creación de diferentes materiais de comunicación para o Curso de Iniciación ao Jazz e Música Moderna. Co paso dos anos, o proxecto foi evolucionando ata incorporar unha identidade visual propia capaz de dar coherencia ao conxunto de actividades promovidas pola asociación.',
-    'work.bruar.body3':       'O sistema baséase nunha marca de construción simple e adaptable, pensada para convivir con linguaxes gráficas cambiantes e responder ás necesidades específicas de cada edición. A identidade complétase cun símbolo variable utilizado principalmente en contornos dixitais, permitindo manter o recoñecemento da marca sen renunciar á flexibilidade visual.',
-    'work.bruar.section2':    'Colaboración continuada',
-    'work.bruar.body4':       'Desde 2016 desenvolvéronse diferentes pezas de comunicación para cursos, concertos e actividades divulgativas organizadas por BRUAR. A serie de carteis realizada para o Curso de Iniciación ao Jazz e Música Moderna reflicte esta evolución, explorando distintas solucións gráficas ao tempo que mantén unha relación continuada coa identidade da asociación.',
+    'work.bruar.description': 'Identidade visual para BRUAR, asociación cultural dedicada á promoción do jazz e da música moderna en Ribadeo.',
+    'work.bruar.body1':       'A colaboración con BRUAR comezou en 2016, desenvolvendo diferentes materiais de comunicación para a asociación. Co paso dos anos, a necesidade dunha identidade propia fíxose evidente e, en 2021, naceu a marca actual.',
+    'work.bruar.body2':       'O resultado é un sistema visual sinxelo e flexible, pensado para acompañar a evolución da asociación e adaptarse a soportes moi diversos sen perder recoñecemento.',
+    'work.bruar.body3':       'BRUAR é unha asociación cultural cun orzamento limitado para comunicación. Esa realidade condicionou o deseño desde o principio: a identidade debía ser económica de producir, doada de reproducir e suficientemente flexible para funcionar en calquera contexto.',
+    'work.bruar.body4':       'A marca constrúese a partir dunha forma xeométrica sinxela inspirada nun metrónomo, convertendo un elemento ligado á práctica e ao ensino musical nun símbolo recoñecible e versátil. O sistema permite múltiples aplicacións cromáticas sen perder personalidade nin consistencia.',
+    'work.bruar.body5':       'A identidade foi deseñada para convivir con soportes moi diferentes, desde pequenos elementos de uso interno ata aplicacións de gran formato. Máis que un logotipo, o proxecto define un sistema gráfico capaz de adaptarse ás necesidades da asociación mantendo sempre unha linguaxe visual coherente.',
+    'work.bruar.body6':       'Desde a creación da identidade en 2021, a marca continúa evolucionando xunto coa asociación, incorporando novas aplicacións e mantendo unha presenza visual consistente en todos os soportes.',
   },
   es: {
     'nav.works':              'Trabajos',
@@ -27,15 +27,15 @@ const translations = {
     'footer.alias':           'También conocido como Ajaspino',
     'work.nav.prev':          'Anterior',
     'work.nav.next':          'Siguiente',
-    'work.bruar.date':        '2016–Actualidad',
-    'work.bruar.category':    'Cultura',
+    'work.bruar.date':        '2021',
     'work.bruar.discipline':  'Diseño Gráfico',
-    'work.bruar.description': 'Identidad visual para BRUAR, asociación cultural dedicada a la promoción del jazz y la música moderna en Ribadeo. Un sistema gráfico flexible desarrollado para acompañar la comunicación de sus cursos, conciertos y actividades desde 2016.',
-    'work.bruar.body1':       'Desde hace más de una década, BRUAR promueve actividades vinculadas a la formación musical, el jazz y la música moderna en Ribadeo. La asociación organiza cursos, conciertos y encuentros que reúnen alumnado, profesorado y aficionados alrededor de la práctica y divulgación musical.',
-    'work.bruar.body2':       'La colaboración comenzó en 2016 con la creación de diferentes materiales de comunicación para el Curso de Iniciación al Jazz y Música Moderna. Con el paso de los años, el proyecto fue evolucionando hasta incorporar una identidad visual propia capaz de dar coherencia al conjunto de actividades promovidas por la asociación.',
-    'work.bruar.body3':       'El sistema se basa en una marca de construcción simple y adaptable, pensada para convivir con lenguajes gráficos cambiantes y responder a las necesidades específicas de cada edición. La identidad se completa con un símbolo variable utilizado principalmente en entornos digitales, permitiendo mantener el reconocimiento de la marca sin renunciar a la flexibilidad visual.',
-    'work.bruar.section2':    'Colaboración continuada',
-    'work.bruar.body4':       'Desde 2016 se han desarrollado diferentes piezas de comunicación para cursos, conciertos y actividades divulgativas organizadas por BRUAR. La serie de carteles realizada para el Curso de Iniciación al Jazz y Música Moderna refleja esta evolución, explorando distintas soluciones gráficas al tiempo que mantiene una relación continuada con la identidad de la asociación.',
+    'work.bruar.description': 'Identidad visual para BRUAR, asociación cultural dedicada a la promoción del jazz y la música moderna en Ribadeo.',
+    'work.bruar.body1':       'La colaboración con BRUAR comenzó en 2016, desarrollando diferentes materiales de comunicación para la asociación. Con el paso de los años, la necesidad de una identidad propia se hizo evidente y, en 2021, nació la marca actual.',
+    'work.bruar.body2':       'El resultado es un sistema visual sencillo y flexible, pensado para acompañar la evolución de la asociación y adaptarse a soportes muy diversos sin perder reconocimiento.',
+    'work.bruar.body3':       'BRUAR es una asociación cultural con un presupuesto limitado para comunicación. Esa realidad condicionó el diseño desde el principio: la identidad debía ser económica de producir, fácil de reproducir y suficientemente flexible para funcionar en cualquier contexto.',
+    'work.bruar.body4':       'La marca se construye a partir de una forma geométrica simple inspirada en un metrónomo, convirtiendo un elemento ligado a la práctica y la enseñanza musical en un símbolo reconocible y versátil. El sistema permite múltiples aplicaciones cromáticas sin perder personalidad ni consistencia.',
+    'work.bruar.body5':       'La identidad fue diseñada para convivir con soportes muy diferentes, desde pequeños elementos de uso interno hasta aplicaciones de gran formato. Más que un logotipo, el proyecto define un sistema gráfico capaz de adaptarse a las necesidades de la asociación manteniendo siempre un lenguaje visual coherente.',
+    'work.bruar.body6':       'Desde la creación de la identidad en 2021, la marca continúa evolucionando junto a la asociación, incorporando nuevas aplicaciones y manteniendo una presencia visual consistente en todos los soportes.',
   }
 };
 
@@ -102,24 +102,3 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeMenu();
 });
 
-/* --- Entrada de bloques con scroll ------------------------- */
-const revealEls = Array.from(
-  document.querySelectorAll('.work-images-grid')
-).filter(el => el.children.length > 1);
-
-function calcEntryProgress(rect, vh) {
-  return Math.max(0, Math.min(1, (vh - rect.top) / (vh * 0.38)));
-}
-
-function runReveal() {
-  const vh = window.innerHeight;
-  revealEls.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    const p = Math.max(0, Math.min(1, (vh - rect.top) / rect.height));
-    el.style.opacity   = (0.2 + p * 0.8).toFixed(3);
-    el.style.transform = `scale(${(0.75 + p * 0.25).toFixed(3)})`;
-  });
-  requestAnimationFrame(runReveal);
-}
-
-runReveal();
