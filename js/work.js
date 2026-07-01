@@ -32,10 +32,10 @@ const translations = {
     'work.bruar.description': 'Identidad visual para BRUAR, asociación cultural dedicada a la promoción del jazz y la música moderna en Ribadeo.',
     'work.bruar.body1':       'La colaboración con BRUAR comenzó en 2016, desarrollando diferentes materiales de comunicación para la asociación. Con el paso de los años, la necesidad de una identidad propia se hizo evidente y, en 2021, nació la marca actual.',
     'work.bruar.body2':       'El resultado es un sistema visual sencillo y flexible, pensado para acompañar la evolución de la asociación y adaptarse a soportes muy diversos sin perder reconocimiento.',
-    'work.bruar.body3':       'BRUAR es una asociación cultural con un presupuesto limitado para comunicación. Esa realidad condicionó el diseño desde el principio: la identidad debía ser económica de producir, fácil de reproducir y suficientemente flexible para funcionar en cualquier contexto.',
-    'work.bruar.body4':       'La marca se construye a partir de una forma geométrica simple inspirada en un metrónomo, convirtiendo un elemento ligado a la práctica y la enseñanza musical en un símbolo reconocible y versátil. El sistema permite múltiples aplicaciones cromáticas sin perder personalidad ni consistencia.',
+    'work.bruar.body3':       'BRUAR es una asociación cultural con un presupuesto limitado para comunicación. Esa realidad condicionó el diseño desde el principio: la identidad debía ser económica de producir, fácil de reproducir y lo suficientemente flexible como para funcionar en cualquier contexto.',
+    'work.bruar.body4':       'La marca se construye a partir de una forma geométrica sencilla inspirada en un metrónomo, convirtiendo un elemento ligado a la práctica y la enseñanza musical en un símbolo reconocible y versátil. El sistema permite múltiples aplicaciones cromáticas sin perder personalidad ni consistencia.',
     'work.bruar.body5':       'La identidad fue diseñada para convivir con soportes muy diferentes, desde pequeños elementos de uso interno hasta aplicaciones de gran formato. Más que un logotipo, el proyecto define un sistema gráfico capaz de adaptarse a las necesidades de la asociación manteniendo siempre un lenguaje visual coherente.',
-    'work.bruar.body6':       'Desde la creación de la identidad en 2021, la marca continúa evolucionando junto a la asociación, incorporando nuevas aplicaciones y manteniendo una presencia visual consistente en todos los soportes.',
+    'work.bruar.body6':       'Desde la creación de la identidad en 2021, la marca continúa evolucionando junto con la asociación, incorporando nuevas aplicaciones y manteniendo una presencia visual consistente en todos los soportes.',
   }
 };
 
