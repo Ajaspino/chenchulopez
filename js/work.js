@@ -50,6 +50,11 @@ function applyLang(lang) {
     if (t[key] !== undefined) el.textContent = t[key];
   });
 
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+
   document.documentElement.lang = lang;
 
   document.querySelectorAll('.lang-option').forEach(opt => {
