@@ -18,6 +18,15 @@ const translations = {
     'work.bruar.body3':       'BRUAR é unha asociación cultural cun orzamento limitado para comunicación. Esa realidade condicionou o deseño desde o principio: a identidade debía ser económica de producir, doada de reproducir e suficientemente flexible para funcionar en calquera contexto.',
     'work.bruar.body4':       'A marca constrúese a partir dunha forma xeométrica sinxela inspirada nun metrónomo, convertendo un elemento ligado á práctica e ao ensino musical nun símbolo recoñecible e versátil. O sistema permite múltiples aplicacións cromáticas sen perder personalidade nin consistencia.',
     'work.bruar.body5':       'A identidade foi deseñada para convivir con soportes moi diferentes, desde pequenos elementos de uso interno ata aplicacións de gran formato. Máis que un logotipo, o proxecto define un sistema gráfico capaz de adaptarse ás necesidades da asociación mantendo sempre unha linguaxe visual coherente.',
+    'work.cachisnamar.date':        '2017',
+    'work.cachisnamar.discipline':  'Deseño Gráfico',
+    'work.cachisnamar.description': 'Identidade visual para o proxecto persoal do produtor musical Iago Bouzón.',
+    'work.cachisnamar.body1':       'O que comezou como unha colaboración para a produción dunha maqueta acabou converténdose no desenvolvemento da identidade visual de Cachisnamar Recording Studio, o estudo persoal de Iago Bouzón.',
+    'work.cachisnamar.body2':       'O obxectivo era crear unha marca próxima e recoñecible, afastada da estética técnica habitual dos estudos de gravación e capaz de transmitir personalidade desde o primeiro momento.',
+    'work.cachisnamar.body3':       'A identidade parte dunha idea sinxela: dous discos de vinilo e un brazo dun tocadiscos forman un rostro. Este recurso transforma elementos propios do universo musical nun símbolo facilmente recoñecible, achegándolle un carácter desenfadado e memorable sen perder a súa relación directa coa gravación e a produción musical.',
+    'work.cachisnamar.body4':       'A identidade apóiase nunha paleta moi limitada —amarelo, negro e branco— e nunha combinación tipográfica que achega contraste entre expresividade e funcionalidade. O resultado é un sistema visual sinxelo, doadamente reproducible e adaptable a soportes físicos e dixitais.',
+    'work.cachisnamar.body5':       'A identidade trasladouse a diferentes elementos empregados no día a día do estudo: material promocional, obxectos de traballo e aplicacións corporativas. Cada peza mantén a coherencia do sistema visual e reforza o recoñecemento da marca sen recorrer a recursos gráficos innecesarios.',
+    'work.cachisnamar.body6':       'Cachisnamar Recording Studio demostra como un concepto gráfico sinxelo pode dar lugar a unha identidade coherente e flexible. A partir dun único símbolo e dunha paleta cromática reducida, a marca consegue estenderse de forma natural a diferentes soportes, construíndo un sistema visual recoñecible e con personalidade propia.',
     'work.bruar.body6':       'Desde a creación da identidade en 2021, a marca continúa evolucionando xunto coa asociación, incorporando novas aplicacións e mantendo unha presenza visual consistente en todos os soportes.',
   },
   es: {
@@ -35,7 +44,17 @@ const translations = {
     'work.bruar.body3':       'BRUAR es una asociación cultural con un presupuesto limitado para comunicación. Esa realidad condicionó el diseño desde el principio: la identidad debía ser económica de producir, fácil de reproducir y lo suficientemente flexible como para funcionar en cualquier contexto.',
     'work.bruar.body4':       'La marca se construye a partir de una forma geométrica sencilla inspirada en un metrónomo, convirtiendo un elemento ligado a la práctica y la enseñanza musical en un símbolo reconocible y versátil. El sistema permite múltiples aplicaciones cromáticas sin perder personalidad ni consistencia.',
     'work.bruar.body5':       'La identidad fue diseñada para convivir con soportes muy diferentes, desde pequeños elementos de uso interno hasta aplicaciones de gran formato. Más que un logotipo, el proyecto define un sistema gráfico capaz de adaptarse a las necesidades de la asociación manteniendo siempre un lenguaje visual coherente.',
+
     'work.bruar.body6':       'Desde la creación de la identidad en 2021, la marca continúa evolucionando junto con la asociación, incorporando nuevas aplicaciones y manteniendo una presencia visual consistente en todos los soportes.',
+    'work.cachisnamar.date':        '2017',
+    'work.cachisnamar.discipline':  'Diseño Gráfico',
+    'work.cachisnamar.description': 'Identidad visual para el proyecto personal del productor musical Iago Bouzón.',
+    'work.cachisnamar.body1':       'Lo que comenzó como una colaboración para la producción de una maqueta acabó convirtiéndose en el desarrollo de la identidad visual de Cachisnamar Recording Studio, el estudio personal de Iago Bouzón.',
+    'work.cachisnamar.body2':       'El objetivo era crear una marca cercana y reconocible, alejada de la estética técnica habitual de los estudios de grabación y capaz de transmitir personalidad desde el primer momento.',
+    'work.cachisnamar.body3':       'La identidad parte de una idea sencilla: dos discos de vinilo y un brazo de un tocadiscos forman un rostro. Este recurso transforma elementos propios del universo musical en un símbolo fácilmente reconocible, aportándole un carácter desenfadado y memorable sin perder su relación directa con la grabación y la producción musical.',
+    'work.cachisnamar.body4':       'La identidad se apoya en una paleta muy limitada —amarillo, negro y blanco— y en una combinación tipográfica que aporta contraste entre expresividad y funcionalidad. El resultado es un sistema visual sencillo, fácilmente reproducible y adaptable a soportes físicos y digitales.',
+    'work.cachisnamar.body5':       'La identidad se trasladó a diferentes elementos empleados en el día a día del estudio: material promocional, objetos de trabajo y aplicaciones corporativas. Cada pieza mantiene la coherencia del sistema visual y refuerza el reconocimiento de la marca sin recurrir a recursos gráficos innecesarios.',
+    'work.cachisnamar.body6':       'Cachisnamar Recording Studio demuestra cómo un concepto gráfico sencillo puede dar lugar a una identidad coherente y flexible. A partir de un único símbolo y una paleta cromática reducida, la marca consigue extenderse de forma natural a diferentes soportes, construyendo un sistema visual reconocible y con personalidad propia.',
   }
 };
 
