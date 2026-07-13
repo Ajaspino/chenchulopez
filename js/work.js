@@ -29,7 +29,7 @@ const translations = {
     'work.grot.date':        '2017',
     'work.grot.discipline':  'Deseño Gráfico',
     'work.grot.description': 'Material promocional para Grot, banda de rock formada na Coruña en 2017.',
-    'work.grot.body1':       'Grot é unha banda de rock formada na Coruña en 2017, integrada por Carlos Pena (voz e guitarra acústica), Jano García (guitarra eléctrica), Rubén Martínez (baixo) e Chenchu López (batería). <em>Dreaming to Become a Lady</em> foi a súa primeira maqueta, gravada por Aarón Bouzón en Cachisnamar Recording Studio entre o 7 de xullo e o 22 de setembro de 2017.',
+    'work.grot.body1':       'Grot é unha banda de rock formada na Coruña en 2017, integrada por Carlos Pena (voz e guitarra acústica), Jano García (guitarra eléctrica), Rubén Martínez (baixo) e Chenchu López (batería). <em>Dreaming to Become a Lady</em> foi a súa primeira maqueta, gravada por Aarón Bouzón en Cachisnamar Recording Studio no verán de 2017.',
     'work.grot.body2':       'Para acompañar a publicación, deseñouse un cartel promocional e a portada para unha edición en vinilo que finalmente non chegou a materializarse.',
   },
   es: {
@@ -59,7 +59,7 @@ const translations = {
     'work.grot.date':        '2017',
     'work.grot.discipline':  'Diseño Gráfico',
     'work.grot.description': 'Material promocional para Grot, banda de rock formada en A Coruña en 2017.',
-    'work.grot.body1':       'Grot es una banda de rock formada en A Coruña en 2017, integrada por Carlos Pena (voz y guitarra acústica), Jano García (guitarra eléctrica), Rubén Martínez (bajo) y Chenchu López (batería). <em>Dreaming to Become a Lady</em> fue su primera maqueta, grabada por Aarón Bouzón en Cachisnamar Recording Studio entre el 7 de julio y el 22 de septiembre de 2017.',
+    'work.grot.body1':       'Grot es una banda de rock formada en A Coruña en 2017, integrada por Carlos Pena (voz y guitarra acústica), Jano García (guitarra eléctrica), Rubén Martínez (bajo) y Chenchu López (batería). <em>Dreaming to Become a Lady</em> fue su primera maqueta, grabada por Aarón Bouzón en Cachisnamar Recording Studio en el verano de 2017.',
     'work.grot.body2':       'Para acompañar la publicación, se diseñó un cartel promocional y la portada para una edición en vinilo que finalmente no llegó a materializarse.',
   }
 };
