@@ -26,6 +26,11 @@ const translations = {
     'work.cachisnamar.body3':       'A identidade parte dunha idea sinxela: dous discos de vinilo e un brazo dun tocadiscos forman un rostro. Este recurso transforma elementos propios do universo musical nun símbolo facilmente recoñecible, achegándolle un carácter desenfadado sen perder a súa relación directa coa gravación e a produción musical.',
     'work.cachisnamar.body4':       'A identidade apóiase nunha paleta moi limitada —amarelo, negro e branco— e nunha combinación tipográfica que achega contraste entre expresividade e funcionalidade. O resultado é un sistema visual sinxelo, doadamente reproducible e adaptable a soportes físicos e dixitais.',
     'work.bruar.body6':       'Desde a creación da identidade en 2021, a marca continúa evolucionando xunto coa asociación, incorporando novas aplicacións e mantendo unha presenza visual consistente en todos os soportes.',
+    'work.grot.date':        '2017',
+    'work.grot.discipline':  'Deseño Gráfico',
+    'work.grot.description': 'Material promocional para Grot, banda de rock formada na Coruña en 2017.',
+    'work.grot.body1':       'Grot é unha banda de rock formada na Coruña en 2017, integrada por Carlos Pena (voz e guitarra acústica), Jano García (guitarra eléctrica), Rubén Martínez (baixo) e Chenchu López (batería). <em>Dreaming to Become a Lady</em> foi a súa primeira maqueta, gravada por Aarón Bouzón en Cachisnamar Recording Studio entre o 7 de xullo e o 22 de setembro de 2017.',
+    'work.grot.body2':       'Para acompañar a publicación, deseñouse un cartel promocional e a portada para unha edición en vinilo que finalmente non chegou a materializarse.',
   },
   es: {
     'nav.works':              'Trabajos',
@@ -51,6 +56,11 @@ const translations = {
     'work.cachisnamar.body2':       'El objetivo era crear una marca cercana y reconocible, alejada de la estética técnica habitual de los estudios de grabación y capaz de transmitir personalidad desde el primer momento.',
     'work.cachisnamar.body3':       'La identidad parte de una idea sencilla: dos discos de vinilo y un brazo de un tocadiscos forman un rostro. Este recurso transforma elementos propios del universo musical en un símbolo fácilmente reconocible, aportándole un carácter desenfadado sin perder su relación directa con la grabación y la producción musical.',
     'work.cachisnamar.body4':       'La identidad se apoya en una paleta muy limitada —amarillo, negro y blanco— y en una combinación tipográfica que aporta contraste entre expresividad y funcionalidad. El resultado es un sistema visual sencillo, fácilmente reproducible y adaptable a soportes físicos y digitales.',
+    'work.grot.date':        '2017',
+    'work.grot.discipline':  'Diseño Gráfico',
+    'work.grot.description': 'Material promocional para Grot, banda de rock formada en A Coruña en 2017.',
+    'work.grot.body1':       'Grot es una banda de rock formada en A Coruña en 2017, integrada por Carlos Pena (voz y guitarra acústica), Jano García (guitarra eléctrica), Rubén Martínez (bajo) y Chenchu López (batería). <em>Dreaming to Become a Lady</em> fue su primera maqueta, grabada por Aarón Bouzón en Cachisnamar Recording Studio entre el 7 de julio y el 22 de septiembre de 2017.',
+    'work.grot.body2':       'Para acompañar la publicación, se diseñó un cartel promocional y la portada para una edición en vinilo que finalmente no llegó a materializarse.',
   }
 };
 
