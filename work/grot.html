@@ -216,7 +216,7 @@
 
     player.on('play',  function () { setPlaying(true); });
     player.on('pause', function () { setPlaying(false); });
-    player.on('ended', function () { setPlaying(false); fill.style.width = '0%'; cur.textContent = '0:00'; });
+    player.on('ended', function () { setPlaying(false); fill.style.width = '0%'; cur.textContent = '0:00'; player.setCurrentTime(0); });
 
     function doToggle() {
       playing ? player.pause() : player.play();
