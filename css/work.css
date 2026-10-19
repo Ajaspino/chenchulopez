@@ -1,0 +1,321 @@
+/* ============================================================
+   CHENCHU LÓPEZ — Páginas de proyecto
+   ============================================================ */
+
+/* --- Cabecera do proxecto ---------------------------------- */
+.work-header {
+  border-top: none;
+  padding-bottom: var(--space-l);
+}
+
+.work-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-m);
+}
+
+.work-meta-item {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.work-meta-sep {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--line);
+}
+
+.work-title {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: var(--space-m);
+}
+
+.work-description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+/* --- Bloques de contido ------------------------------------ */
+.work-block--text {
+  padding-block: var(--space-l);
+}
+
+.work-images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-m);
+  margin-bottom: var(--space-m);
+}
+
+.work-images-grid > img:only-child {
+  grid-column: 1 / -1;
+  aspect-ratio: auto;
+  height: auto;
+}
+
+.work-images-grid > lottie-player:only-child {
+  grid-column: 1 / -1;
+}
+
+.work-image--lottie {
+  width: 100%;
+  display: block;
+  aspect-ratio: 2/1;
+  grid-column: 1 / -1;
+}
+
+.work-image {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  display: block;
+}
+
+.work-image--portrait {
+  aspect-ratio: 2/3;
+}
+
+.work-image--square {
+  aspect-ratio: 1/1;
+}
+
+.work-image--graphic {
+  object-fit: contain;
+  background: var(--hover-bg);
+}
+
+/* ── Video player ─────────────────────────────────────── */
+.work-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  grid-column: 1 / -1;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+}
+
+.work-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+}
+
+/* Overlay: botón play grande */
+.vp-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.vp-overlay.vp-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.vp-play-big {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  border: 2px solid rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s, border-color 0.15s;
+}
+
+.vp-play-big:hover {
+  background: #D5332D;
+  border-color: #D5332D;
+  transform: scale(1.08);
+}
+
+.vp-play-big svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  margin-left: 3px;
+}
+
+/* Barra inferior */
+.vp-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.work-video.vp-ui-on .vp-bar {
+  opacity: 1;
+}
+
+/* Botones de la barra */
+.vp-btn {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  transition: opacity 0.15s;
+}
+
+.vp-btn:hover { opacity: 1; }
+
+.vp-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+/* Play / pause toggle */
+.vp-icon-pause { display: none; }
+.work-video.vp-playing .vp-icon-play  { display: none; }
+.work-video.vp-playing .vp-icon-pause { display: block; }
+
+/* Fullscreen toggle */
+.vp-icon-exit { display: none; }
+.work-video.vp-fs .vp-icon-fs   { display: none; }
+.work-video.vp-fs .vp-icon-exit { display: block; }
+
+/* Tiempo */
+.vp-time {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.8);
+  flex-shrink: 0;
+  min-width: 3ch;
+}
+
+/* Barra de progreso */
+.vp-seek {
+  flex: 1;
+  height: 3px;
+  background: rgba(255,255,255,0.22);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: height 0.15s;
+}
+
+.vp-seek:hover { height: 5px; }
+
+.vp-seek-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0%;
+  background: #D5332D;
+  border-radius: 2px;
+  pointer-events: none;
+  transition: width 0.25s linear;
+}
+
+@media (max-width: 639px) {
+  .work-images-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-section-title {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-m);
+}
+
+.work-body {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  line-height: 1.75;
+  max-width: 52ch;
+  color: var(--ink);
+}
+
+/* --- Navegación anterior / siguiente ----------------------- */
+.work-nav {
+  border-top: 1px solid var(--line);
+  margin-top: var(--space-xl);
+  padding-block: var(--space-l);
+}
+
+.work-nav .page-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.work-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-block: var(--space-m);
+  transition: opacity 0.15s;
+}
+
+.work-nav-link--next {
+  text-align: right;
+  border-left: 1px solid var(--line);
+  padding-left: var(--space-l);
+}
+
+.work-nav-link--prev {
+  padding-right: var(--space-l);
+}
+
+.work-nav-link:hover { opacity: 0.6; }
+
+.work-nav-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.work-nav-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* --- Responsive -------------------------------------------- */
+@media (max-width: 639px) {
+  .work-nav .page-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .work-nav-link--next {
+    text-align: left;
+    border-left: none;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+  }
+}

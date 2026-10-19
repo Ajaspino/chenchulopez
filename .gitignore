@@ -1,0 +1,5 @@
+# Vídeos — demasiado pesados para git, se alojan en Vimeo o servidor
+**/*.mp4
+
+# macOS
+.DS_Store

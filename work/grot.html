@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grot — Chenchu López</title>
+  <meta name="description" content="Material promocional para Grot, banda de rock formada na Coruña en 2017.">
+  <meta name="author" content="Chenchu López">
+
+  <link rel="canonical" href="https://chenchulopez.com/work/grot.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/work.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="page-wrap">
+      <a href="../index.html" class="site-logo" aria-label="Chenchu López, inicio">CL</a>
+      <div class="header-right">
+        <nav aria-label="Navegación principal">
+          <ul class="site-nav">
+            <li><a href="../index.html#works" data-i18n="nav.works">Traballos</a></li>
+            <li><a href="../index.html#about" data-i18n="nav.about">Percorrido</a></li>
+            <li><a href="../index.html#contact" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </nav>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">
+          <span class="lang-option" data-lang="gl">GL</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-option" data-lang="es">ES</span>
+        </button>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENÚ MOBILE -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Navegación mobile">
+      <ul class="mobile-nav">
+        <li><a href="../index.html#works" class="mobile-nav-item" data-i18n="nav.works">Traballos</a></li>
+        <li><a href="../index.html#about" class="mobile-nav-item" data-i18n="nav.about">Percorrido</a></li>
+        <li><a href="../index.html#contact" class="mobile-nav-item" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="lang-toggle lang-toggle--mobile" id="lang-toggle-mobile" aria-label="Cambiar idioma">
+      <span class="lang-option" data-lang="gl">GL</span>
+      <span class="lang-sep">/</span>
+      <span class="lang-option" data-lang="es">ES</span>
+    </button>
+  </div>
+
+  <main class="work-page">
+
+    <!-- CABECERA -->
+    <section class="work-header">
+      <div class="page-wrap">
+        <div class="work-meta">
+          <span class="work-meta-item" data-i18n="work.grot.date">2017</span>
+          <span class="work-meta-sep">·</span>
+          <span class="work-meta-item" data-i18n="work.grot.discipline">Deseño Gráfico</span>
+        </div>
+        <h1 class="work-title">Grot</h1>
+        <p class="work-description" data-i18n-html="work.grot.description">
+          Material promocional para Grot, banda de rock formada na Coruña en 2017.
+        </p>
+      </div>
+    </section>
+
+    <!-- grot-01 (doble) -->
+    <div class="page-wrap">
+      <div class="work-images-grid">
+        <img src="../img/works/grot/grot-01.jpg" alt="Grot — Portada Dreaming to Become a Lady" class="work-image work-image--graphic">
+      </div>
+    </div>
+
+    <!-- Texto 1 -->
+    <div class="work-block--text">
+      <div class="page-wrap">
+        <p class="work-body" data-i18n-html="work.grot.body1">
+          Grot é unha banda de rock formada na Coruña en 2017, integrada por Carlos Pena (voz e guitarra acústica), Jano García (guitarra eléctrica), Rubén Martínez (baixo) e Chenchu López (batería). <em>Dreaming to Become a Lady</em> foi a súa primeira maqueta, gravada por Aarón Bouzón en Cachisnamar Recording Studio no verán de 2017.
+        </p>
+        <br>
+        <p class="work-body" data-i18n-html="work.grot.body2">
+          Para acompañar a publicación, deseñouse un cartel promocional e a portada para unha edición en vinilo que finalmente non chegou a materializarse.
+        </p>
+      </div>
+    </div>
+
+    <!-- Vídeo Vimeo -->
+    <div class="page-wrap">
+      <div class="work-images-grid">
+        <div class="work-video work-image--graphic" id="vp-wrap">
+          <iframe id="grot-player"
+            src="https://player.vimeo.com/video/1236239916?title=0&byline=0&portrait=0&badge=0&dnt=1&controls=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="Dreaming to Become a Lady — Grot"></iframe>
+
+          <!-- Overlay: botón play grande (visible cuando pausado) -->
+          <div class="vp-overlay" id="vp-overlay">
+            <button class="vp-play-big" id="vp-play-big" aria-label="Reproducir">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="6,3 20,12 6,21"/></svg>
+            </button>
+          </div>
+
+          <!-- Barra de controles inferior -->
+          <div class="vp-bar" id="vp-bar">
+            <button class="vp-btn" id="vp-toggle" aria-label="Play / Pausa">
+              <svg class="vp-icon-play" viewBox="0 0 24 24" aria-hidden="true"><polygon points="6,3 20,12 6,21"/></svg>
+              <svg class="vp-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+            </button>
+            <span class="vp-time" id="vp-cur">0:00</span>
+            <div class="vp-seek" id="vp-seek" role="slider" aria-label="Progreso">
+              <div class="vp-seek-fill" id="vp-fill"></div>
+            </div>
+            <span class="vp-time" id="vp-dur">—</span>
+            <button class="vp-btn" id="vp-fs" aria-label="Pantalla completa">
+              <svg class="vp-icon-fs" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h6v2H5v4H3V3zm12 0h6v6h-2V5h-4V3zM3 15h2v4h4v2H3v-6zm16 4h-4v2h6v-6h-2v4z"/></svg>
+              <svg class="vp-icon-exit" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grupo: grot-02 + grot-03 (2:3) -->
+    <div class="page-wrap">
+      <div class="work-images-grid">
+        <img src="../img/works/grot/grot-02.jpg" alt="Grot — Cartel promocional" class="work-image work-image--portrait">
+        <img src="../img/works/grot/grot-03.jpg" alt="Grot — Portada vinilo" class="work-image work-image--portrait">
+        <img src="../img/works/grot/grot-04.jpg" alt="Grot" class="work-image work-image--portrait">
+      </div>
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="work-nav" aria-label="Navegación entre proxectos">
+      <div class="page-wrap">
+        <a href="#" class="work-nav-link work-nav-link--prev">
+          <span class="work-nav-label" data-i18n="work.nav.prev">Anterior</span>
+          <span class="work-nav-title">—</span>
+        </a>
+        <a href="#" class="work-nav-link work-nav-link--next">
+          <span class="work-nav-label" data-i18n="work.nav.next">Seguinte</span>
+          <span class="work-nav-title">—</span>
+        </a>
+      </div>
+    </nav>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="page-wrap">
+      <span class="footer-copy">2026 Chenchu López</span>
+      <span class="footer-alias" data-i18n="footer.alias">Tamén coñecido como Ajaspino</span>
+    </div>
+  </footer>
+
+  <script src="../js/work.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+  (function () {
+    var wrap    = document.getElementById('vp-wrap');
+    var iframe  = document.getElementById('grot-player');
+    var overlay = document.getElementById('vp-overlay');
+    var toggle  = document.getElementById('vp-toggle');
+    var playBig = document.getElementById('vp-play-big');
+    var seek    = document.getElementById('vp-seek');
+    var fill    = document.getElementById('vp-fill');
+    var cur     = document.getElementById('vp-cur');
+    var dur     = document.getElementById('vp-dur');
+    var fs      = document.getElementById('vp-fs');
+
+    if (!iframe || typeof Vimeo === 'undefined') return;
+
+    var player   = new Vimeo.Player(iframe);
+    var playing  = false;
+    var duration = 0;
+    var seeking  = false;
+    var hideTimer;
+
+    function fmt(s) {
+      var m = Math.floor(s / 60);
+      var ss = Math.floor(s % 60);
+      return m + ':' + (ss < 10 ? '0' : '') + ss;
+    }
+
+    player.getDuration().then(function (d) {
+      duration = d;
+      dur.textContent = fmt(d);
+    });
+
+    player.on('timeupdate', function (data) {
+      if (!seeking) {
+        cur.textContent = fmt(data.seconds);
+        fill.style.width = (data.percent * 100) + '%';
+      }
+    });
+
+    function setPlaying(state) {
+      playing = state;
+      wrap.classList.toggle('vp-playing', state);
+      overlay.classList.toggle('vp-hidden', state);
+    }
+
+    player.on('play',  function () { setPlaying(true); });
+    player.on('pause', function () { setPlaying(false); });
+    player.on('ended', function () { setPlaying(false); fill.style.width = '0%'; cur.textContent = '0:00'; });
+
+    function doToggle() {
+      playing ? player.pause() : player.play();
+    }
+
+    toggle.addEventListener('click',  doToggle);
+    playBig.addEventListener('click', doToggle);
+
+    /* Click sobre el vídeo (fuera de la barra) → play/pausa */
+    wrap.addEventListener('click', function (e) {
+      if (!e.target.closest('#vp-bar')) doToggle();
+    });
+
+    /* Seek: click y arrastre */
+    function seekTo(e) {
+      var rect = seek.getBoundingClientRect();
+      var pct  = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      fill.style.width = (pct * 100) + '%';
+      player.setCurrentTime(pct * duration);
+    }
+
+    seek.addEventListener('mousedown', function (e) {
+      seeking = true;
+      seekTo(e);
+      function onMove(ev) { seekTo(ev); }
+      function onUp()   { seeking = false; document.removeEventListener('mousemove', onMove); document.removeEventListener('mouseup', onUp); }
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup',   onUp);
+    });
+
+    /* Mostrar / ocultar barra */
+    function showUI() {
+      wrap.classList.add('vp-ui-on');
+      clearTimeout(hideTimer);
+      if (playing) hideTimer = setTimeout(function () { wrap.classList.remove('vp-ui-on'); }, 2500);
+    }
+
+    wrap.addEventListener('mousemove',  showUI);
+    wrap.addEventListener('mouseleave', function () { if (playing) wrap.classList.remove('vp-ui-on'); });
+    wrap.addEventListener('touchstart', showUI, { passive: true });
+
+    /* Estado inicial: mostrar controles */
+    wrap.classList.add('vp-ui-on');
+
+    /* Fullscreen */
+    fs.addEventListener('click', function () {
+      if (!document.fullscreenElement) {
+        wrap.requestFullscreen && wrap.requestFullscreen();
+      } else {
+        document.exitFullscreen && document.exitFullscreen();
+      }
+    });
+
+    document.addEventListener('fullscreenchange', function () {
+      wrap.classList.toggle('vp-fs', !!document.fullscreenElement);
+    });
+  })();
+  </script>
+
+</body>
+</html>
