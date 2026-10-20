@@ -37,7 +37,11 @@
 
   var day = new Date().toISOString().slice(0, 10);
 
-  ['visits', 'd-' + day, 'c-' + country, 'l-' + lang, 'dv-' + device, 'b-' + browser].forEach(function (k) {
+  // Slug de la página actual
+  var seg = location.pathname.replace(/\/$/, '').split('/').pop();
+  var page = (!seg || seg === 'chenchulopez') ? 'index' : seg.replace('.html', '');
+
+  ['visits', 'd-' + day, 'c-' + country, 'l-' + lang, 'dv-' + device, 'b-' + browser, 'p-' + page].forEach(function (k) {
     fetch(API + '/hit/' + NS + '/' + k).catch(function () {});
   });
 })();

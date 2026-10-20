@@ -347,6 +347,7 @@
         kpi_best_day:    'Mellor día',
         kpi_top_country: 'País principal',
         chart_label:     'Visitas por día (30 días)',
+        pages_label:     'Proxectos máis visitados',
         countries_label: 'Países',
         langs_label:     'Idiomas',
         devices_label:   'Dispositivos',
@@ -374,6 +375,7 @@
         kpi_best_day:    'Mejor día',
         kpi_top_country: 'País principal',
         chart_label:     'Visitas por día (30 días)',
+        pages_label:     'Proyectos más visitados',
         countries_label: 'Países',
         langs_label:     'Idiomas',
         devices_label:   'Dispositivos',
@@ -523,6 +525,14 @@
       html += '<div class="chart-date-labels"><span>' + firstDay + '</span><span>' + lastDay + '</span></div>';
       html += '</div>';
 
+      // Páxinas máis visitadas
+      if (data.pages && data.pages.length > 0) {
+        html += '<div style="margin-top:var(--space-m)">';
+        html += '<p class="stats-section-title">' + t('pages_label') + '</p>';
+        html += pagesBlock(data.pages.slice(0, 10));
+        html += '</div>';
+      }
+
       // Rankings
       html += '<div class="stats-rank" style="margin-top:var(--space-m)">';
       html += rankBlock(t('countries_label'), data.countries);
@@ -544,6 +554,23 @@
     function kpi(label, value) {
       return '<div class="kpi"><span class="kpi-label">' + label + '</span>'
            + '<span class="kpi-value">' + value + '</span></div>';
+    }
+
+    function pagesBlock(items) {
+      var max = items[0] ? (items[0].value || 1) : 1;
+      var html = '<ul class="rank-list" style="max-width:480px">';
+      items.forEach(function(item, i) {
+        if (item.value === 0) return;
+        var pct = Math.round((item.value / max) * 100);
+        html += '<li class="rank-item">';
+        html += '<span class="rank-code" style="min-width:1.5rem;font-family:var(--font-mono);color:var(--muted)">' + (i + 1) + '</span>';
+        html += '<span class="rank-code" style="min-width:8rem;font-weight:500">' + (item.label || item.code) + '</span>';
+        html += '<div class="rank-bar-bg"><div class="rank-bar-fill" style="width:' + pct + '%"></div></div>';
+        html += '<span class="rank-count">' + item.value + '</span>';
+        html += '</li>';
+      });
+      html += '</ul>';
+      return html;
     }
 
     function rankBlock(title, items) {

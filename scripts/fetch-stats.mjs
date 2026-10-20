@@ -12,6 +12,7 @@ const countries = [...new Set(Object.values(cfg.timezones)), 'XX'];
 const langs = [...cfg.languages, 'other'];
 const devices = cfg.devices;
 const browsers = cfg.browsers;
+const pages = cfg.pages || [];
 
 // 30 días hasta hoy (UTC), de más antiguo a más reciente
 const days = [];
@@ -25,6 +26,7 @@ const keys = [
   ...langs.map((l) => `l-${l}`),
   ...devices.map((d) => `dv-${d}`),
   ...browsers.map((b) => `b-${b}`),
+  ...pages.map((p) => `p-${p}`),
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -54,11 +56,16 @@ try {
 
   const dayRows = days.map((d) => ({ date: d, visits: values[`d-${d}`] }));
 
+  const pageRows = pages
+    .map((p) => ({ code: p, label: (cfg.pageLabels || {})[p] || p, value: values[`p-${p}`] }))
+    .sort((a, b) => b.value - a.value);
+
   const data = {
     generatedAt: new Date().toISOString(),
     total: values.visits,
     last30: dayRows.reduce((s, d) => s + d.visits, 0),
     days: dayRows,
+    pages: pageRows,
     countries: rank('c', countries),
     languages: rank('l', langs),
     devices: rank('dv', devices),

@@ -2,6 +2,13 @@
  "namespace": "chenchulopez-52d6830ff85e",
  "api": "https://abacus.jasoncameron.dev",
  "days": 30,
+ "pages": ["index", "bruar", "cachisnamar", "grot"],
+ "pageLabels": {
+  "index": "Inicio",
+  "bruar": "BRUAR",
+  "cachisnamar": "Cachisnamar",
+  "grot": "Grot"
+ },
  "languages": [
   "en",
   "es",
