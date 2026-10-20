@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Chenchu López</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .error-page {
+      min-height: calc(100dvh - 120px);
+      display: flex;
+      align-items: center;
+      border-top: none;
+    }
+
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: var(--space-m);
+    }
+
+    .error-title {
+      font-size: clamp(2.5rem, 8vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: var(--space-m);
+    }
+
+    .error-desc {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--muted);
+      max-width: 40ch;
+      line-height: 1.6;
+      margin-bottom: var(--space-l);
+    }
+
+    .error-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      transition: opacity 0.15s;
+    }
+
+    .error-back:hover { opacity: 0.5; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="page-wrap">
+      <a href="index.html" class="site-logo" aria-label="Chenchu López, inicio">CL</a>
+      <div class="header-right">
+        <nav aria-label="Navegación principal">
+          <ul class="site-nav">
+            <li><a href="index.html#works" id="t-nav-works">Traballos</a></li>
+            <li><a href="index.html#about" id="t-nav-about">Percorrido</a></li>
+            <li><a href="index.html#contact" id="t-nav-contact">Contacto</a></li>
+          </ul>
+        </nav>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">
+          <span class="lang-option" data-lang="gl">GL</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-option" data-lang="es">ES</span>
+        </button>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENÚ MOBILE -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Navegación mobile">
+      <ul class="mobile-nav">
+        <li><a href="index.html#works" class="mobile-nav-item" id="t-mnav-works">Traballos</a></li>
+        <li><a href="index.html#about" class="mobile-nav-item" id="t-mnav-about">Percorrido</a></li>
+        <li><a href="index.html#contact" class="mobile-nav-item" id="t-mnav-contact">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="lang-toggle lang-toggle--mobile" id="lang-toggle-mobile" aria-label="Cambiar idioma">
+      <span class="lang-option" data-lang="gl">GL</span>
+      <span class="lang-sep">/</span>
+      <span class="lang-option" data-lang="es">ES</span>
+    </button>
+  </div>
+
+  <main>
+    <section class="error-page">
+      <div class="page-wrap">
+        <span class="error-code">404</span>
+        <h1 class="error-title" id="t-title">Páxina non atopada</h1>
+        <p class="error-desc" id="t-desc">Esta páxina non existe ou foi movida a outra dirección.</p>
+        <a href="index.html" class="error-back" id="t-back">← Volver ao inicio</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="page-wrap">
+      <span class="footer-copy">2026 Chenchu López</span>
+      <span class="footer-alias" id="t-footer-alias">Tamén coñecido como Ajaspino</span>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    var T = {
+      gl: {
+        title:          'Páxina non atopada',
+        desc:           'Esta páxina non existe ou foi movida a outra dirección.',
+        back:           '← Volver ao inicio',
+        'footer.alias': 'Tamén coñecido como Ajaspino',
+        'nav.works':    'Traballos',
+        'nav.about':    'Percorrido',
+        'nav.contact':  'Contacto',
+      },
+      es: {
+        title:          'Página no encontrada',
+        desc:           'Esta página no existe o ha sido movida a otra dirección.',
+        back:           '← Volver al inicio',
+        'footer.alias': 'También conocido como Ajaspino',
+        'nav.works':    'Trabajos',
+        'nav.about':    'Recorrido',
+        'nav.contact':  'Contacto',
+      }
+    };
+
+    var lang = localStorage.getItem('lang') || 'gl';
+
+    function applyLang(l) {
+      lang = l;
+      document.documentElement.lang = l;
+      document.title = '404 — Chenchu López';
+
+      var tl = T[l] || T.gl;
+      document.getElementById('t-title').textContent       = tl.title;
+      document.getElementById('t-desc').textContent        = tl.desc;
+      document.getElementById('t-back').textContent        = tl.back;
+      document.getElementById('t-footer-alias').textContent = tl['footer.alias'];
+      document.getElementById('t-nav-works').textContent   = tl['nav.works'];
+      document.getElementById('t-nav-about').textContent   = tl['nav.about'];
+      document.getElementById('t-nav-contact').textContent = tl['nav.contact'];
+      document.getElementById('t-mnav-works').textContent  = tl['nav.works'];
+      document.getElementById('t-mnav-about').textContent  = tl['nav.about'];
+      document.getElementById('t-mnav-contact').textContent = tl['nav.contact'];
+
+      document.querySelectorAll('.lang-option').forEach(function(opt) {
+        opt.classList.toggle('is-active', opt.dataset.lang === l);
+      });
+
+      localStorage.setItem('lang', l);
+    }
+
+    /* --- Menú mobile ------------------------------------------ */
+    var menuToggle = document.getElementById('menu-toggle');
+    var mobileMenu = document.getElementById('mobile-menu');
+
+    function openMenu() {
+      menuToggle.classList.add('is-open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.add('is-open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('is-open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.contains('is-open') ? closeMenu() : openMenu();
+    });
+
+    document.querySelectorAll('.mobile-nav a').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
+
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+      applyLang(lang === 'gl' ? 'es' : 'gl');
+    });
+    document.getElementById('lang-toggle-mobile').addEventListener('click', function() {
+      applyLang(lang === 'gl' ? 'es' : 'gl');
+    });
+
+    applyLang(lang);
+  })();
+  </script>
+
+</body>
+</html>

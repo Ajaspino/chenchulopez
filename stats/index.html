@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estatísticas — Chenchu López</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    .stats-hero {
+      padding-block: var(--space-l);
+      border-top: none;
+    }
+
+    .stats-hero h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: var(--space-s);
+    }
+
+    .stats-hero p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+    }
+
+    .stats-section {
+      padding-block: var(--space-l);
+      border-top: 1px solid var(--line);
+    }
+
+    .stats-section-title {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--space-m);
+    }
+
+    /* KPIs */
+    .stats-kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-s);
+    }
+
+    @media (max-width: 768px) {
+      .stats-kpis { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .stats-kpis { grid-template-columns: 1fr 1fr; }
+    }
+
+    .kpi {
+      padding: var(--space-s);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+
+    .kpi-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .kpi-value {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      display: block;
+    }
+
+    /* Gráfico de barras */
+    .stats-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 80px;
+      margin-top: var(--space-s);
+    }
+
+    .chart-bar-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    .chart-bar {
+      width: 100%;
+      background: var(--ink);
+      opacity: 0.15;
+      border-radius: 2px 2px 0 0;
+      min-height: 2px;
+      transition: opacity 0.15s;
+    }
+
+    .chart-bar.is-today { opacity: 0.6; }
+    .chart-bar.has-visits { opacity: 0.4; }
+    .chart-bar.has-visits:hover { opacity: 0.8; }
+
+    .chart-date-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      color: var(--muted);
+    }
+
+    /* Rankings */
+    .stats-rank {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-m);
+    }
+
+    @media (max-width: 639px) {
+      .stats-rank { grid-template-columns: 1fr; }
+    }
+
+    .rank-group-title {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--space-s);
+    }
+
+    .rank-list {
+      list-style: none;
+    }
+
+    .rank-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-s);
+      padding-block: 0.5rem;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.9rem;
+    }
+
+    .rank-item:last-child { border-bottom: none; }
+
+    .rank-bar-bg {
+      flex: 1;
+      height: 3px;
+      background: var(--line);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .rank-bar-fill {
+      height: 100%;
+      background: var(--ink);
+      border-radius: 2px;
+    }
+
+    .rank-count {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      min-width: 2.5rem;
+      text-align: right;
+    }
+
+    .rank-code {
+      min-width: 3rem;
+      font-weight: 500;
+    }
+
+    /* Privacidade */
+    .stats-privacy {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 52ch;
+    }
+
+    .stats-privacy p + p { margin-top: 0.8rem; }
+
+    .btn-no-count {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: var(--space-s);
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--ink);
+      border-radius: 2px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      background: none;
+      color: var(--ink);
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-no-count:hover {
+      background: var(--ink);
+      color: var(--bg);
+    }
+
+    .btn-no-count.is-active {
+      background: var(--ink);
+      color: var(--bg);
+    }
+
+    /* Loading / error */
+    .stats-loading {
+      padding: var(--space-l) 0;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .stats-error {
+      padding: var(--space-s);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="page-wrap">
+      <a href="../index.html" class="site-logo" aria-label="Chenchu López, inicio">CL</a>
+      <div class="header-right">
+        <nav aria-label="Navegación principal">
+          <ul class="site-nav">
+            <li><a href="../index.html#works" id="t-nav-works">Traballos</a></li>
+            <li><a href="../index.html#about" id="t-nav-about">Percorrido</a></li>
+            <li><a href="../index.html#contact" id="t-nav-contact">Contacto</a></li>
+          </ul>
+        </nav>
+        <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">
+          <span class="lang-option" data-lang="gl">GL</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-option" data-lang="es">ES</span>
+        </button>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENÚ MOBILE -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Navegación mobile">
+      <ul class="mobile-nav">
+        <li><a href="../index.html#works" class="mobile-nav-item" id="t-mnav-works">Traballos</a></li>
+        <li><a href="../index.html#about" class="mobile-nav-item" id="t-mnav-about">Percorrido</a></li>
+        <li><a href="../index.html#contact" class="mobile-nav-item" id="t-mnav-contact">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="lang-toggle lang-toggle--mobile" id="lang-toggle-mobile" aria-label="Cambiar idioma">
+      <span class="lang-option" data-lang="gl">GL</span>
+      <span class="lang-sep">/</span>
+      <span class="lang-option" data-lang="es">ES</span>
+    </button>
+  </div>
+
+  <main>
+
+    <section class="stats-hero" style="border-top:none; padding-top: var(--space-l);">
+      <div class="page-wrap">
+        <h1 id="t-title">Estatísticas</h1>
+        <p id="t-subtitle">Visitas ao portfolio — datos sen cookies</p>
+      </div>
+    </section>
+
+    <section class="stats-section" id="stats-kpis-section">
+      <div class="page-wrap">
+        <p class="stats-section-title" id="t-kpi-label">Resumo</p>
+        <div id="stats-root">
+          <div class="stats-loading" id="t-loading">Cargando datos…</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="page-wrap">
+        <p class="stats-section-title" id="t-privacy-label">Privacidade</p>
+        <div class="stats-privacy">
+          <p id="t-privacy-1">Os datos recóllense sen cookies, sen login e sen almacenar datos persoais. Por cada sesión do navegador rexístranse: un contador de visita, o día, o país estimado pola zona horaria, o idioma do navegador, o tipo de dispositivo e o navegador. O reconto almacénase nun servizo público (<a href="https://abacus.jasoncameron.dev" target="_blank" rel="noopener noreferrer">abacus.jasoncameron.dev</a>).</p>
+          <p id="t-privacy-2">Limitacións: calquera que coñeza o espazo de nomes pode inflar as cifras, e as IPs chegan ao servizo contador (non se gardan nesta web). Para máis rigor habería que usar Plausible, Umami ou similar.</p>
+          <button class="btn-no-count" id="btn-no-count" type="button">
+            <span id="t-btn-nocount">Non contar as miñas visitas</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="page-wrap">
+      <span class="footer-copy">2026 Chenchu López</span>
+      <span class="footer-alias" id="t-footer-alias">Tamén coñecido como Ajaspino</span>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    /* --- i18n ------------------------------------------------- */
+    var T = {
+      gl: {
+        'nav.works':     'Traballos',
+        'nav.about':     'Percorrido',
+        'nav.contact':   'Contacto',
+        'footer.alias':  'Tamén coñecido como Ajaspino',
+        title:           'Estatísticas',
+        subtitle:        'Visitas ao portfolio — datos sen cookies',
+        'kpi-label':     'Resumo',
+        loading:         'Cargando datos…',
+        error:           'Non foi posible cargar os datos de momento.',
+        kpi_last30:      'Últimos 30 días',
+        kpi_total:       'Total',
+        kpi_best_day:    'Mellor día',
+        kpi_top_country: 'País principal',
+        chart_label:     'Visitas por día (30 días)',
+        countries_label: 'Países',
+        langs_label:     'Idiomas',
+        devices_label:   'Dispositivos',
+        browsers_label:  'Navegadores',
+        'privacy-label': 'Privacidade',
+        'privacy-1':     'Os datos recóllense sen cookies, sen login e sen almacenar datos persoais. Por cada sesión do navegador rexístranse: un contador de visita, o día, o país estimado pola zona horaria, o idioma do navegador, o tipo de dispositivo e o navegador. O reconto almacénase nun servizo público (<a href="https://abacus.jasoncameron.dev" target="_blank" rel="noopener noreferrer">abacus.jasoncameron.dev</a>).',
+        'privacy-2':     'Limitacións: calquera que coñeza o espazo de nomes pode inflar as cifras, e as IPs chegan ao servizo contador (non se gardan nesta web). Para máis rigor habería que usar Plausible, Umami ou similar.',
+        btn_nocount:     'Non contar as miñas visitas',
+        btn_counting:    'As túas visitas non se contan',
+        updated:         'Actualizado',
+        no_data:         '—',
+      },
+      es: {
+        'nav.works':     'Trabajos',
+        'nav.about':     'Recorrido',
+        'nav.contact':   'Contacto',
+        'footer.alias':  'También conocido como Ajaspino',
+        title:           'Estadísticas',
+        subtitle:        'Visitas al portfolio — datos sin cookies',
+        'kpi-label':     'Resumen',
+        loading:         'Cargando datos…',
+        error:           'No fue posible cargar los datos por el momento.',
+        kpi_last30:      'Últimos 30 días',
+        kpi_total:       'Total',
+        kpi_best_day:    'Mejor día',
+        kpi_top_country: 'País principal',
+        chart_label:     'Visitas por día (30 días)',
+        countries_label: 'Países',
+        langs_label:     'Idiomas',
+        devices_label:   'Dispositivos',
+        browsers_label:  'Navegadores',
+        'privacy-label': 'Privacidad',
+        'privacy-1':     'Los datos se recogen sin cookies, sin login y sin almacenar datos personales. Por cada sesión del navegador se registran: un contador de visita, el día, el país estimado por la zona horaria, el idioma del navegador, el tipo de dispositivo y el navegador. El recuento se almacena en un servicio público (<a href="https://abacus.jasoncameron.dev" target="_blank" rel="noopener noreferrer">abacus.jasoncameron.dev</a>).',
+        'privacy-2':     'Limitaciones: cualquiera que conozca el espacio de nombres puede inflar las cifras, y las IPs llegan al servicio contador (no se guardan en esta web). Para más rigor habría que usar Plausible, Umami o similar.',
+        btn_nocount:     'No contar mis visitas',
+        btn_counting:    'Tus visitas no se cuentan',
+        updated:         'Actualizado',
+        no_data:         '—',
+      }
+    };
+
+    var lang = localStorage.getItem('lang') || 'gl';
+
+    function t(key) { return (T[lang] && T[lang][key]) || (T.gl[key]) || key; }
+
+    function applyLang(l) {
+      lang = l;
+      document.documentElement.lang = l;
+      document.title = t('title') + ' — Chenchu López';
+
+      document.getElementById('t-title').textContent        = t('title');
+      document.getElementById('t-subtitle').textContent     = t('subtitle');
+      document.getElementById('t-kpi-label').textContent    = t('kpi-label');
+      document.getElementById('t-privacy-label').textContent = t('privacy-label');
+      document.getElementById('t-privacy-1').innerHTML      = t('privacy-1');
+      document.getElementById('t-privacy-2').textContent    = t('privacy-2');
+      document.getElementById('t-footer-alias').textContent = t('footer.alias');
+
+      document.getElementById('t-nav-works').textContent   = t('nav.works');
+      document.getElementById('t-nav-about').textContent   = t('nav.about');
+      document.getElementById('t-nav-contact').textContent = t('nav.contact');
+      document.getElementById('t-mnav-works').textContent  = t('nav.works');
+      document.getElementById('t-mnav-about').textContent  = t('nav.about');
+      document.getElementById('t-mnav-contact').textContent = t('nav.contact');
+
+      var loadEl = document.getElementById('t-loading');
+      if (loadEl) loadEl.textContent = t('loading');
+
+      var nocount = document.getElementById('t-btn-nocount');
+      var isOptOut = false;
+      try { isOptOut = !!localStorage.getItem('chenchulopez:no-track'); } catch(_){}
+      if (nocount) nocount.textContent = isOptOut ? t('btn_counting') : t('btn_nocount');
+      var btnEl = document.getElementById('btn-no-count');
+      if (btnEl) btnEl.classList.toggle('is-active', isOptOut);
+
+      document.querySelectorAll('.lang-option').forEach(function(opt) {
+        opt.classList.toggle('is-active', opt.dataset.lang === l);
+      });
+
+      localStorage.setItem('lang', l);
+
+      // Re-render stats if data already loaded
+      if (window._statsData) renderStats(window._statsData);
+    }
+
+    /* --- Menú mobile ------------------------------------------ */
+    var menuToggle = document.getElementById('menu-toggle');
+    var mobileMenu = document.getElementById('mobile-menu');
+
+    function openMenu() {
+      menuToggle.classList.add('is-open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.add('is-open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('is-open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.contains('is-open') ? closeMenu() : openMenu();
+    });
+
+    document.querySelectorAll('.mobile-nav a').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
+
+    /* --- Lang toggle ------------------------------------------ */
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+      applyLang(lang === 'gl' ? 'es' : 'gl');
+    });
+    document.getElementById('lang-toggle-mobile').addEventListener('click', function() {
+      applyLang(lang === 'gl' ? 'es' : 'gl');
+    });
+
+    /* --- Opt-out ---------------------------------------------- */
+    document.getElementById('btn-no-count').addEventListener('click', function() {
+      var isOptOut;
+      try { isOptOut = !!localStorage.getItem('chenchulopez:no-track'); } catch(_){ isOptOut = false; }
+      try {
+        if (isOptOut) { localStorage.removeItem('chenchulopez:no-track'); }
+        else          { localStorage.setItem('chenchulopez:no-track', '1'); }
+      } catch(_) {}
+      applyLang(lang);
+    });
+
+    /* --- Renderizar estadísticas ------------------------------ */
+    function fmtDate(iso) {
+      var d = new Date(iso + 'T00:00:00Z');
+      return d.toLocaleDateString(lang === 'gl' ? 'gl-ES' : 'es-ES', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+    }
+
+    function renderStats(data) {
+      var root = document.getElementById('stats-root');
+      if (!root) return;
+
+      var bestDay = data.days.reduce(function(a, b) { return b.visits > a.visits ? b : a; }, { date: '', visits: 0 });
+      var topCountry = data.countries.length > 0 ? data.countries[0].code.toUpperCase() : '—';
+      var maxDay = Math.max.apply(null, data.days.map(function(d){ return d.visits; })) || 1;
+
+      var html = '';
+
+      // KPIs
+      html += '<div class="stats-kpis">';
+      html += kpi(t('kpi_last30'), data.last30);
+      html += kpi(t('kpi_total'), data.total);
+      html += kpi(t('kpi_best_day'), bestDay.visits > 0 ? fmtDate(bestDay.date) + ' (' + bestDay.visits + ')' : t('no_data'));
+      html += kpi(t('kpi_top_country'), topCountry);
+      html += '</div>';
+
+      // Gráfico de barras
+      html += '<div style="margin-top:var(--space-m)">';
+      html += '<p class="stats-section-title">' + t('chart_label') + '</p>';
+      html += '<div class="stats-chart">';
+      data.days.forEach(function(d) {
+        var pct = maxDay > 0 ? Math.round((d.visits / maxDay) * 100) : 0;
+        var today = d.date === new Date().toISOString().slice(0,10);
+        var cls = 'chart-bar' + (today ? ' is-today' : '') + (d.visits > 0 ? ' has-visits' : '');
+        html += '<div class="chart-bar-wrap" title="' + fmtDate(d.date) + ': ' + d.visits + '">';
+        html += '<div class="' + cls + '" style="height:' + Math.max(2, pct) + '%"></div>';
+        html += '</div>';
+      });
+      html += '</div>';
+      var firstDay = data.days[0] ? fmtDate(data.days[0].date) : '';
+      var lastDay  = data.days[data.days.length - 1] ? fmtDate(data.days[data.days.length - 1].date) : '';
+      html += '<div class="chart-date-labels"><span>' + firstDay + '</span><span>' + lastDay + '</span></div>';
+      html += '</div>';
+
+      // Rankings
+      html += '<div class="stats-rank" style="margin-top:var(--space-m)">';
+      html += rankBlock(t('countries_label'), data.countries);
+      html += rankBlock(t('langs_label'), data.languages);
+      html += rankBlock(t('devices_label'), data.devices);
+      html += rankBlock(t('browsers_label'), data.browsers);
+      html += '</div>';
+
+      // Timestamp
+      if (data.generatedAt) {
+        var genDate = new Date(data.generatedAt);
+        html += '<p style="margin-top:var(--space-m);font-family:var(--font-mono);font-size:0.6rem;color:var(--muted)">'
+              + t('updated') + ': ' + genDate.toLocaleString(lang === 'gl' ? 'gl-ES' : 'es-ES') + '</p>';
+      }
+
+      root.innerHTML = html;
+    }
+
+    function kpi(label, value) {
+      return '<div class="kpi"><span class="kpi-label">' + label + '</span>'
+           + '<span class="kpi-value">' + value + '</span></div>';
+    }
+
+    function rankBlock(title, items) {
+      if (!items || items.length === 0) return '';
+      var max = items[0].value || 1;
+      var html = '<div><p class="rank-group-title">' + title + '</p><ul class="rank-list">';
+      items.slice(0, 6).forEach(function(item) {
+        var pct = Math.round((item.value / max) * 100);
+        html += '<li class="rank-item">';
+        html += '<span class="rank-code">' + item.code.toUpperCase() + '</span>';
+        html += '<div class="rank-bar-bg"><div class="rank-bar-fill" style="width:' + pct + '%"></div></div>';
+        html += '<span class="rank-count">' + item.value + '</span>';
+        html += '</li>';
+      });
+      html += '</ul></div>';
+      return html;
+    }
+
+    /* --- Cargar datos ----------------------------------------- */
+    function loadStats() {
+      fetch('../stats/data.json?_=' + Date.now())
+        .then(function(r) {
+          if (!r.ok) throw new Error(r.status);
+          return r.json();
+        })
+        .then(function(data) {
+          window._statsData = data;
+          renderStats(data);
+        })
+        .catch(function() {
+          var root = document.getElementById('stats-root');
+          if (root) root.innerHTML = '<div class="stats-error">' + t('error') + '</div>';
+        });
+    }
+
+    /* --- Init ------------------------------------------------- */
+    applyLang(lang);
+    loadStats();
+  })();
+  </script>
+
+</body>
+</html>
