@@ -560,16 +560,17 @@
     }
 
     function pagesBlock(items) {
-      var max = items[0] ? (items[0].value || 1) : 1;
-      var html = '<ul class="rank-list" style="max-width:480px">';
+      var maxVal = 0;
+      items.forEach(function(x) { if (x.value > maxVal) maxVal = x.value; });
+      var max = maxVal || 1;
+      var html = '<ul class="rank-list" style="max-width:560px">';
       items.forEach(function(item, i) {
-        if (item.value === 0) return;
         var pct = Math.round((item.value / max) * 100);
         html += '<li class="rank-item">';
-        html += '<span class="rank-code" style="min-width:1.5rem;font-family:var(--font-mono);color:var(--muted)">' + (i + 1) + '</span>';
-        html += '<span class="rank-code" style="min-width:8rem;font-weight:500">' + (item.label || item.code) + '</span>';
-        html += '<div class="rank-bar-bg"><div class="rank-bar-fill" style="width:' + pct + '%"></div></div>';
-        html += '<span class="rank-count">' + item.value + '</span>';
+        html += '<span style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);min-width:1.4rem;flex-shrink:0">' + (i + 1) + '</span>';
+        html += '<span style="font-weight:500;flex:0 0 auto;min-width:9rem">' + (item.label || item.code) + '</span>';
+        html += '<div class="rank-bar-bg" style="flex:1"><div class="rank-bar-fill" style="width:' + pct + '%"></div></div>';
+        html += '<span class="rank-count">' + (item.value || 0) + '</span>';
         html += '</li>';
       });
       html += '</ul>';
