@@ -104,7 +104,33 @@
       height: 100%;
       justify-content: flex-end;
       position: relative;
+      cursor: default;
     }
+
+    /* Tooltip custom — sin delay, funciona en móvil */
+    .chart-bar-wrap[data-tip]::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      line-height: 1;
+      color: var(--bg);
+      background: var(--ink);
+      padding: 5px 8px;
+      border-radius: 3px;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 20;
+    }
+    .chart-bar-wrap[data-tip]:hover::after { opacity: 1; }
+
+    /* Evitar que se salga en los extremos */
+    .chart-bar-wrap:first-child[data-tip]::after  { left: 0; transform: none; }
+    .chart-bar-wrap:last-child[data-tip]::after   { left: auto; right: 0; transform: none; }
 
     .chart-bar {
       width: 100%;
@@ -515,7 +541,7 @@
         var pct = maxDay > 0 ? Math.round((d.visits / maxDay) * 100) : 0;
         var today = d.date === new Date().toISOString().slice(0,10);
         var cls = 'chart-bar' + (today ? ' is-today' : '') + (d.visits > 0 ? ' has-visits' : '');
-        html += '<div class="chart-bar-wrap" title="' + fmtDate(d.date) + ': ' + d.visits + '">';
+        html += '<div class="chart-bar-wrap" data-tip="' + fmtDate(d.date) + ': ' + d.visits + '">';
         html += '<div class="' + cls + '" style="height:' + Math.max(2, pct) + '%"></div>';
         html += '</div>';
       });
