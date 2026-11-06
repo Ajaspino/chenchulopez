@@ -344,6 +344,13 @@ section:first-of-type { border-top: none; }
   border-color: var(--ink);
 }
 
+.filter-label--short { display: none; }
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .filter-label--full  { display: none; }
+  .filter-label--short { display: inline; }
+}
+
 .works-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
