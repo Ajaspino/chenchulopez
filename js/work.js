@@ -31,6 +31,12 @@ const translations = {
     'work.grot.description': 'Material promocional para Grot, banda de rock formada na Coruña en 2017.',
     'work.grot.body1':       'Grot é unha banda de rock formada na Coruña en 2017, integrada por Carlos Pena (voz e guitarra acústica), Jano García (guitarra eléctrica), Rubén Martínez (baixo) e Chenchu López (batería). <em>Dreaming to Become a Lady</em> foi a súa primeira maqueta, gravada por Aarón Bouzón en Cachisnamar Recording Studio no verán de 2017.',
     'work.grot.body2':       'Para acompañar a publicación, deseñouse un cartel promocional e a portada para unha edición en vinilo que finalmente non chegou a materializarse.',
+    'work.trazos.date':        '2001',
+    'work.trazos.client':      'Deputación da Coruña',
+    'work.trazos.discipline':  'Deseño Editorial',
+    'work.trazos.description': 'Portada do catálogo da exposición <em>Trazos de Galicia. Un percorrido pola historia do debuxo contemporáneo galego</em>, organizada pola Deputación da Coruña en 2001.',
+    'work.trazos.body1':       'A exposición foi producida e xestionada por Rey de Oros, empresa de xestión cultural galega, en colaboración co museógrafo Pepe Barro. A mostra reuniu a obra dos artistas plásticos contemporáneos máis relevantes de Galicia, ilustrando a evolución do debuxo cara á modernidade.',
+    'work.trazos.body2':       'Con carácter itinerante, recorreu concellos e salas da provincia de A Coruña e chegou tamén a Milán. O catálogo que acompañou a mostra serviu de rexistro permanente deste percorrido pola historia do debuxo contemporáneo galego.',
   },
   es: {
     'nav.works':              'Trabajos',
@@ -61,6 +67,12 @@ const translations = {
     'work.grot.description': 'Material promocional para Grot, banda de rock formada en A Coruña en 2017.',
     'work.grot.body1':       'Grot es una banda de rock formada en A Coruña en 2017, integrada por Carlos Pena (voz y guitarra acústica), Jano García (guitarra eléctrica), Rubén Martínez (bajo) y Chenchu López (batería). <em>Dreaming to Become a Lady</em> fue su primera maqueta, grabada por Aarón Bouzón en Cachisnamar Recording Studio en el verano de 2017.',
     'work.grot.body2':       'Para acompañar la publicación, se diseñó un cartel promocional y la portada para una edición en vinilo que finalmente no llegó a materializarse.',
+    'work.trazos.date':        '2001',
+    'work.trazos.client':      'Deputación da Coruña',
+    'work.trazos.discipline':  'Diseño Editorial',
+    'work.trazos.description': 'Portada del catálogo de la exposición <em>Trazos de Galicia. Un percorrido pola historia do debuxo contemporáneo galego</em>, organizada por la Deputación da Coruña en 2001.',
+    'work.trazos.body1':       'La exposición fue producida y gestionada por Rey de Oros, empresa de gestión cultural gallega, en colaboración con el museógrafo Pepe Barro. La muestra reunió la obra de los artistas plásticos contemporáneos más relevantes de Galicia, ilustrando la evolución del dibujo hacia la modernidad.',
+    'work.trazos.body2':       'Con carácter itinerante, recorrió municipios y salas de la provincia de A Coruña, llegando también a Milán. El catálogo que acompañó la muestra sirvió de registro permanente de este recorrido por la historia del dibujo contemporáneo gallego.',
   }
 };
 
