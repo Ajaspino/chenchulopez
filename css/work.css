@@ -304,6 +304,9 @@
   font-weight: 500;
   color: var(--ink);
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* --- Responsive -------------------------------------------- */
