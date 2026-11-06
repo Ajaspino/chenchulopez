@@ -34,9 +34,9 @@ const translations = {
     'work.trazos.date':        '2001',
     'work.trazos.client':      'Deputación da Coruña',
     'work.trazos.discipline':  'Deseño Editorial',
-    'work.trazos.description': 'Portada do catálogo da exposición <em>Trazos de Galicia. Un percorrido pola historia do debuxo contemporáneo galego</em>, organizada pola Deputación da Coruña en 2001.',
-    'work.trazos.body1':       'A exposición foi producida e xestionada por Rey de Oros, empresa de xestión cultural galega, en colaboración co museógrafo Pepe Barro. A mostra reuniu a obra dos artistas plásticos contemporáneos máis relevantes de Galicia, ilustrando a evolución do debuxo cara á modernidade.',
-    'work.trazos.body2':       'Con carácter itinerante, recorreu concellos e salas da provincia de A Coruña e chegou tamén a Milán. O catálogo que acompañou a mostra serviu de rexistro permanente deste percorrido pola historia do debuxo contemporáneo galego.',
+    'work.trazos.description': 'Imaxe principal da exposición e portada do catálogo <em>Trazos de Galicia. Un percorrido pola historia do debuxo contemporáneo galego</em>, organizada pola Deputación da Coruña en 2001.',
+    'work.trazos.body1':       'Un proxecto en colaboración coa miña irmá Marigel, deseñadora e maquetadora da exposición. A miña achega foi a imaxe principal que protagonizou tanto a portada do catálogo como a propia mostra.',
+    'work.trazos.body2':       'A exposición foi producida por Rey de Oros, en colaboración co museógrafo Pepe Barro, e reuniu a obra dos artistas plásticos contemporáneos máis relevantes de Galicia. Con carácter itinerante, recorreu concellos e salas da provincia de A Coruña e chegou tamén a Milán.',
   },
   es: {
     'nav.works':              'Trabajos',
@@ -70,9 +70,9 @@ const translations = {
     'work.trazos.date':        '2001',
     'work.trazos.client':      'Deputación da Coruña',
     'work.trazos.discipline':  'Diseño Editorial',
-    'work.trazos.description': 'Portada del catálogo de la exposición <em>Trazos de Galicia. Un percorrido pola historia do debuxo contemporáneo galego</em>, organizada por la Deputación da Coruña en 2001.',
-    'work.trazos.body1':       'La exposición fue producida y gestionada por Rey de Oros, empresa de gestión cultural gallega, en colaboración con el museógrafo Pepe Barro. La muestra reunió la obra de los artistas plásticos contemporáneos más relevantes de Galicia, ilustrando la evolución del dibujo hacia la modernidad.',
-    'work.trazos.body2':       'Con carácter itinerante, recorrió municipios y salas de la provincia de A Coruña, llegando también a Milán. El catálogo que acompañó la muestra sirvió de registro permanente de este recorrido por la historia del dibujo contemporáneo gallego.',
+    'work.trazos.description': 'Imagen principal de la exposición y portada del catálogo <em>Trazos de Galicia. Un percorrido pola historia do debuxo contemporáneo galego</em>, organizada por la Deputación da Coruña en 2001.',
+    'work.trazos.body1':       'Un proyecto en colaboración con mi hermana Marigel, diseñadora y maquetista de la exposición. Mi aportación fue la imagen principal que protagonizó tanto la portada del catálogo como la propia muestra.',
+    'work.trazos.body2':       'La exposición fue producida por Rey de Oros, en colaboración con el museógrafo Pepe Barro, y reunió la obra de los artistas plásticos contemporáneos más relevantes de Galicia. Con carácter itinerante, recorrió municipios y salas de la provincia de A Coruña, llegando también a Milán.',
   }
 };
 
