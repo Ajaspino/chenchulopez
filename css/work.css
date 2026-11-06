@@ -93,6 +93,15 @@
   background: var(--hover-bg);
 }
 
+.work-image--solo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: initial;
+  display: block;
+  margin-bottom: var(--space-m);
+}
+
 /* ── Video player ─────────────────────────────────────── */
 .work-video {
   position: relative;
