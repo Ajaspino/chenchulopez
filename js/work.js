@@ -34,8 +34,8 @@ const translations = {
     'work.trazos.date':        '2001',
     'work.trazos.discipline':  'Deseño Gráfico',
     'work.trazos.description': 'Imaxe principal da exposición e portada do catálogo <em>Trazos de Galicia. Un percorrido pola historia do debuxo contemporáneo galego</em>, organizada pola Deputación da Coruña en 2001.',
-    'work.trazos.body1':       'Un proxecto en colaboración coa miña irmá Marigel, deseñadora e maquetadora da exposición. A miña achega foi a imaxe principal que protagonizou tanto a portada do catálogo como a propia mostra.',
-    'work.trazos.body2':       'A exposición foi producida por Rey de Oros, en colaboración co museógrafo Pepe Barro, e reuniu a obra dos artistas plásticos contemporáneos máis relevantes de Galicia. Con carácter itinerante, recorreu concellos e salas da provincia de A Coruña e chegou tamén a Milán.',
+    'work.trazos.body1':       'Un proxecto desenvolvido en colaboración coa miña irmá Marigel, deseñadora e maquetadora en Rey de Oros, responsable do deseño e da maquetación da exposición. A miña achega centrouse na creación da imaxe principal, que protagonizou tanto a portada do catálogo como a propia mostra.',
+    'work.trazos.body2':       'A exposición, producida por Rey de Oros en colaboración co museógrafo Pepe Barro, reuniu a obra dalgúns dos artistas plásticos contemporáneos máis relevantes de Galicia. De carácter itinerante, percorreu diferentes concellos e salas da provincia da Coruña e chegou tamén a Milán.',
   },
   es: {
     'nav.works':              'Trabajos',
@@ -69,8 +69,8 @@ const translations = {
     'work.trazos.date':        '2001',
     'work.trazos.discipline':  'Diseño Gráfico',
     'work.trazos.description': 'Imagen principal de la exposición y portada del catálogo <em>Trazos de Galicia. Un percorrido pola historia do debuxo contemporáneo galego</em>, organizada por la Deputación da Coruña en 2001.',
-    'work.trazos.body1':       'Un proyecto en colaboración con mi hermana Marigel, diseñadora y maquetista de la exposición. Mi aportación fue la imagen principal que protagonizó tanto la portada del catálogo como la propia muestra.',
-    'work.trazos.body2':       'La exposición fue producida por Rey de Oros, en colaboración con el museógrafo Pepe Barro, y reunió la obra de los artistas plásticos contemporáneos más relevantes de Galicia. Con carácter itinerante, recorrió municipios y salas de la provincia de A Coruña, llegando también a Milán.',
+    'work.trazos.body1':       'Un proyecto desarrollado en colaboración con mi hermana Marigel, diseñadora y maquetista en Rey de Oros, responsable del diseño y la maquetación de la exposición. Mi aportación se centró en la creación de la imagen principal, que protagonizó tanto la portada del catálogo como la propia muestra.',
+    'work.trazos.body2':       'La exposición, producida por Rey de Oros en colaboración con el museógrafo Pepe Barro, reunió la obra de algunos de los artistas plásticos contemporáneos más relevantes de Galicia. De carácter itinerante, recorrió diferentes municipios y salas de la provincia de A Coruña y llegó también a Milán.',
   }
 };
 
