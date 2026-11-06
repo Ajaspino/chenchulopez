@@ -277,6 +277,7 @@
   gap: 0.4rem;
   padding-block: var(--space-m);
   transition: opacity 0.15s;
+  min-width: 0;
 }
 
 .work-nav-link--next {
@@ -300,6 +301,7 @@
 }
 
 .work-nav-title {
+  display: block;
   font-size: 1rem;
   font-weight: 500;
   color: var(--ink);
