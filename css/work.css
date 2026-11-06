@@ -307,15 +307,3 @@
 }
 
 /* --- Responsive -------------------------------------------- */
-@media (max-width: 639px) {
-  .work-nav .page-wrap {
-    grid-template-columns: 1fr;
-  }
-
-  .work-nav-link--next {
-    text-align: left;
-    border-left: none;
-    border-top: 1px solid var(--line);
-    padding-left: 0;
-  }
-}
